@@ -6,7 +6,9 @@
 #define UNIVERSITY_JPO_LO_CPP_DANDELION_H
 
 
-class Dandelion {
+#include "Plant.h"
+
+class Dandelion : Plant {
 
 };
 

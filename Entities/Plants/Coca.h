@@ -6,7 +6,9 @@
 #define UNIVERSITY_JPO_LO_CPP_COCA_H
 
 
-class Coca {
+#include "Plant.h"
+
+class Coca : Plant {
 
 };
 

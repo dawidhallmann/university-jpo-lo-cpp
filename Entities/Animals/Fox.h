@@ -6,7 +6,9 @@
 #define UNIVERSITY_JPO_LO_CPP_FOX_H
 
 
-class Fox {
+#include "Animal.h"
+
+class Fox : Animal {
 
 };
 

@@ -6,7 +6,9 @@
 #define UNIVERSITY_JPO_LO_CPP_GRASS_H
 
 
-class Grass {
+#include "Plant.h"
+
+class Grass : Plant {
 
 };
 

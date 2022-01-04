@@ -6,7 +6,9 @@
 #define UNIVERSITY_JPO_LO_CPP_VIPER_H
 
 
-class Viper {
+#include "Animal.h"
+
+class Viper : Animal {
 
 };
 

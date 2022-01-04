@@ -6,7 +6,9 @@
 #define UNIVERSITY_JPO_LO_CPP_SHEEP_H
 
 
-class Sheep {
+#include "Animal.h"
+
+class Sheep : Animal {
 
 };
 
