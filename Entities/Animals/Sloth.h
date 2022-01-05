@@ -9,7 +9,8 @@
 #include "Animal.h"
 
 class Sloth : Animal {
-
+    static const int baseInitiative=1, baseStrength=2;
+    void action() override;
 };
 
 

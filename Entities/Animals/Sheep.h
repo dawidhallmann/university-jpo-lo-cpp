@@ -9,7 +9,7 @@
 #include "Animal.h"
 
 class Sheep : Animal {
-
+    static const int baseInitiative=4, baseStrength=4;
 };
 
 

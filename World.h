@@ -6,8 +6,16 @@
 #define UNIVERSITY_JPO_LO_CPP_WORLD_H
 
 
-class World {
+#include "Entities/Organism.h"
 
+class World {
+public:
+    World();
+    void nextTurn();
+    void drawWorld();
+    void addEntity(Organism& organism);
+private:
+    Organism* organisms[20][20];
 };
 
 

@@ -9,7 +9,8 @@
 #include "Animal.h"
 
 class Viper : Animal {
-
+    static const int baseInitiative=2, baseStrength=3;
+    void collision() override;
 };
 
 
