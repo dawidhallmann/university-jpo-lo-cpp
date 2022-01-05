@@ -8,8 +8,10 @@
 
 #include "../Organism.h"
 
-class Plant : Organism {
-
+class Plant : public Organism {
+    using Organism::Organism;
+    void collision() override;
+    void action() override;
 };
 
 

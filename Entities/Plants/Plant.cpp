@@ -3,3 +3,6 @@
 //
 
 #include "Plant.h"
+
+void Plant::collision() {}
+void Plant::action() {}

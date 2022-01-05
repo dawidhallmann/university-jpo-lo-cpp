@@ -24,5 +24,5 @@ void World::drawWorld(){
 }
 
 void World::addEntity(Organism* organism){
-    this->organisms[organism->getX()][organism->getY()] = organism;
+    this->organisms[organism->getY()][organism->getX()] = organism;
 }

@@ -8,8 +8,10 @@
 
 #include "Plant.h"
 
-class Dandelion : Plant {
+class Dandelion : public Plant {
     void action() override;
+    void draw() override;
+    using Plant::Plant;
 };
 
 

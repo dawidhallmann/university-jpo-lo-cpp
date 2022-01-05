@@ -10,6 +10,8 @@
 
 class Coca : Plant {
     void collision() override;
+    void draw() override;
+    using Plant::Plant;
 };
 
 
