@@ -8,9 +8,11 @@
 
 #include "Animal.h"
 
-class Fox : Animal {
+class Fox : public Animal {
     static const int baseInitiative=7, baseStrength=3;
     void action() override;
+    void draw() override;
+    using Animal::Animal;
 };
 
 

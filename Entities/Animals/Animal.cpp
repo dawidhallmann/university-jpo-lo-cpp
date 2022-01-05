@@ -3,3 +3,6 @@
 //
 
 #include "Animal.h"
+
+void Animal::collision() {}
+void Animal::action() {}
