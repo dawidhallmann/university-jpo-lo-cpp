@@ -9,7 +9,7 @@
 #include "Plant.h"
 
 class Coca : Plant {
-
+    void collision() override;
 };
 
 

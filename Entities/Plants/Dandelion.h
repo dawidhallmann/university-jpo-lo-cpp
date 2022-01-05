@@ -9,7 +9,7 @@
 #include "Plant.h"
 
 class Dandelion : Plant {
-
+    void action() override;
 };
 
 

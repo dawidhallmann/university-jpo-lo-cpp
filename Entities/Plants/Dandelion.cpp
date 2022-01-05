@@ -3,3 +3,8 @@
 //
 
 #include "Dandelion.h"
+
+void Dandelion::action() {
+    // Podejmuje trzy próby rozprzestrzeniania w
+    // jednej turze
+}
