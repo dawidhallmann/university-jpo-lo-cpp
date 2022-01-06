@@ -10,6 +10,15 @@
 #include "Entities/Animals/Wolf.h"
 #include "Entities/Animals/Sloth.h"
 
+
+void Utils::intro() {
+    std::cout << std::endl;
+    std::cout << "  +——————————————————————————+" << std::endl;
+    std::cout << "  |  Dawid Hallmann s187209  |" << std::endl;
+    std::cout << "  +——————————————————————————+" << std::endl;
+    std::cout << std::endl;
+}
+
 void Utils::printGameControlOptions() {
     std::cout << " n - next turn" << std::endl;
     std::cout << " e - exit game" << std::endl;
@@ -31,10 +40,13 @@ void Utils::spawn1AnimalSet(World *world) {
     world->addEntity(new Wolf(2, 1));
 }
 
-void Utils::intro() {
-    std::cout << std::endl;
-    std::cout << "  +——————————————————————————+" << std::endl;
-    std::cout << "  |  Dawid Hallmann s187209  |" << std::endl;
-    std::cout << "  +——————————————————————————+" << std::endl;
-    std::cout << std::endl;
+void Utils::spawnFoxes(World *world) {
+    world->addEntity(new Fox(4, 2));
+    world->addEntity(new Fox(6, 2));
+    world->addEntity(new Fox(4, 3));
+    world->addEntity(new Fox(4, 5));
+    world->addEntity(new Fox(2, 7));
+    world->addEntity(new Fox(2, 8));
+    world->addEntity(new Fox(1, 3));
+    world->addEntity(new Fox(1, 4));
 }

@@ -9,6 +9,7 @@ int main() {
     World world;
     Utils::spawn1AnimalSet(&world);
     Utils::spawn1PlantSet(&world);
+    Utils::spawnFoxes(&world);
 
     world.drawWorld();
     Utils::printGameControlOptions();

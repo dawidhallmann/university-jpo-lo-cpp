@@ -11,9 +11,12 @@
 class Utils {
 public:
     static void printGameControlOptions();
+    static void intro();
+
     static void spawn1PlantSet(World* world);
     static void spawn1AnimalSet(World* world);
-    static void intro();
+
+    static void spawnFoxes(World* world);
 };
 
 

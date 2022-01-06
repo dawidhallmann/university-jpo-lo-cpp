@@ -57,3 +57,7 @@ void World::clearWorldRepresentation(){
         for (auto & j : organism) j = nullptr;
     }
 }
+
+bool World::isFieldEmpty(int x, int y) {
+    return !this->worldRepresentation[y][x];
+}

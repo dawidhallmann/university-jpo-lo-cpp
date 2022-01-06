@@ -35,11 +35,11 @@ int Organism::getY(){return this->y;}
 int* Organism::getRandomAdjacentField(){
     const int diffIndx = std::rand() % 8;
 
-    coordsDiff[0] = this->x>=19 ?
+    coordsDiff[0] = this->x + (this->x>=19 ?
                     -moveDistanceByBorder()
-                    : this->x<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][1];
-    coordsDiff[1] = this->y>=19 ?
+                    : this->x<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][1]);
+    coordsDiff[1] = this->y + (this->y>=19 ?
                     -moveDistanceByBorder()
-                    : this->y<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][0];
+                    : this->y<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][0]);
     return coordsDiff;
 }
