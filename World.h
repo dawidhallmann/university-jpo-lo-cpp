@@ -7,6 +7,7 @@
 #define UNIVERSITY_JPO_LO_CPP_WORLD_H
 
 
+#include <vector>
 #include "Entities/Organism.h"
 
 class World {
@@ -16,7 +17,11 @@ public:
     void drawWorld();
     void addEntity(Organism* organism);
 private:
-    Organism* organisms[20][20] = {nullptr};
+    std::vector <Organism*> organismsActionOrder;
+    Organism* worldRepresentation[20][20] = {nullptr};
+
+    void generateWorldRepresentation();
+    void clearWorldRepresentation();
 };
 
 
