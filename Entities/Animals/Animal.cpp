@@ -5,7 +5,7 @@
 #include "Animal.h"
 
 
-void Animal::collision() {}
+void Animal::collision(Organism* organism) {}
 void Animal::action() {
     int * diff = Organism::getRandomAdjacentField();
     this->x += diff[0];

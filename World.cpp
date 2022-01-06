@@ -10,12 +10,14 @@ World::World() = default;
 void World::nextTurn() {
     for (const auto &organism: this->organismsActionOrder) {
         organism->action();
+        Organism* collidingEntity = this->worldRepresentation[organism->getY()][organism->getX()];
+        if (collidingEntity) organism->collision(collidingEntity);
+        this->generateWorldRepresentation();
     }
 }
 
 void World::drawWorld(){
     std::cout << "Entites count: " << this->organismsActionOrder.size() << std::endl;
-    this->generateWorldRepresentation();
     for (auto & organism : this->worldRepresentation) {
         std::cout << "|";
         for (auto & j : organism) {

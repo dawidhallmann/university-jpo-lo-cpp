@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Coca.h"
 
-void Coca::collision() {
+void Coca::collision(Organism* organism) {
     // Zwierze, które zjadło tę roślinę w
     // następnej kolejce ma dodatkowy
     // ruch

@@ -13,7 +13,7 @@ public:
     Organism(int x, int y);
     void setCoords(int x, int y);
     virtual void action() = 0;
-    virtual void collision() = 0;
+    virtual void collision(Organism* organism) = 0;
     virtual void draw() = 0;
 
     int getX();

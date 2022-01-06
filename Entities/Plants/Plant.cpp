@@ -4,5 +4,5 @@
 
 #include "Plant.h"
 
-void Plant::collision() {}
+void Plant::collision(Organism* organism) {}
 void Plant::action() {}
