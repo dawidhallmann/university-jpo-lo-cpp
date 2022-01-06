@@ -1,24 +1,17 @@
 #include <iostream>
 #include "World.h"
-#include "Entities/Animals/Fox.h"
-#include "Entities/Animals/Sloth.h"
-#include "Entities/Animals/Wolf.h"
-#include "Entities/Plants/Grass.h"
-#include "Entities/Plants/Dandelion.h"
+#include "Utils.h"
 
 
 int main() {
+    Utils::intro();
+
     World world;
-
-    world.addEntity(new Fox(4, 2));
-    world.addEntity(new Sloth(10, 4));
-    world.addEntity(new Wolf(7, 15));
-    world.addEntity(new Wolf(9, 16));
-
-    world.addEntity(new Grass(9, 15));
-    world.addEntity(new Dandelion(10, 17));
+    Utils::spawn1AnimalSet(&world);
+    Utils::spawn1PlantSet(&world);
 
     world.drawWorld();
+    Utils::printGameControlOptions();
 
     char userInput = ' ';
     while (true){
@@ -33,5 +26,6 @@ int main() {
             default:
                 break;
         }
+        Utils::printGameControlOptions();
     }
 }
