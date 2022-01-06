@@ -18,8 +18,19 @@ int main() {
     world.addEntity(new Dandelion(10, 17));
 
     world.drawWorld();
-    world.nextTurn();
-    world.drawWorld();
 
-    return 0;
+    char userInput = ' ';
+    while (true){
+        std::cin >> userInput;
+        switch (userInput) {
+            case 'n':
+                world.nextTurn();
+                world.drawWorld();
+                break;
+            case 'e':
+                return 0;
+            default:
+                break;
+        }
+    }
 }
