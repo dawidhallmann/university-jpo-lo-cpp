@@ -3,6 +3,25 @@
 //
 
 #include "Organism.h"
+#include "iostream"
+
+
+int coords[2];
+
+const int possibleMoves[8][2] = {
+        {-1, 1},
+        {0, 1},
+        {1, 1},
+        {1, 0},
+        {1, -1},
+        {0, -1},
+        {-1, -1},
+        {-1, 0},
+};
+
+int moveDistanceByBorder(){
+    return std::rand() % 5 < 2 ? 0 : 1;
+}
 
 Organism::Organism(int x, int y){
     this->x = x;
@@ -15,4 +34,16 @@ int Organism::getY(){return this->y;}
 void Organism::setCoords(int xx, int yy){
     this->x = xx;
     this->y = yy;
+}
+
+int* Organism::getRandomAdjacentField(){
+    const int diffIndx = std::rand() % 8;
+
+    coords[0] = this->x>=19 ?
+                    -moveDistanceByBorder()
+                    : this->x<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][1];
+    coords[1] = this->y>=19 ?
+                    -moveDistanceByBorder()
+                    : this->y<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][0];
+    return coords;
 }
