@@ -5,8 +5,8 @@
 #include <iostream>
 #include "Fox.h"
 
-void Fox::action() {
-    Animal::action();
+void Fox::action(World* world) {
+    Animal::action(world);
     // Dobry węch: lis nigdy nie ruszy
     // się na pole zajmowane przez
     // organizm silniejszy niż on

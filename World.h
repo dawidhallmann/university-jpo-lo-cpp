@@ -8,7 +8,8 @@
 
 
 #include <vector>
-#include "Entities/Organism.h"
+
+class Organism;
 
 class World {
 public:

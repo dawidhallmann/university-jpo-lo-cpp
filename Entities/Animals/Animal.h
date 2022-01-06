@@ -9,10 +9,10 @@
 #include "../Organism.h"
 
 class Animal : public Organism {
-    void collision(Organism* organism) override;
+    void collision(World* world, Organism* organism) override;
     using Organism::Organism;
 protected:
-    void action() override;
+    void action(World* world) override;
 };
 
 

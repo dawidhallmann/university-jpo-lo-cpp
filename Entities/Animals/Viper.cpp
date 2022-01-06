@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Viper.h"
 
-void Viper::collision(Organism* organism) {
+void Viper::collision(World* world, Organism* organism) {
     // Ginie przy kolizji z silniejszym
     // przeciwnikiem, ale zatruwa i zabija
     // swojego pogromcę.

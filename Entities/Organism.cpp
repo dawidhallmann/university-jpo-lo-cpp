@@ -31,10 +31,6 @@ Organism::Organism(int x, int y){
 int Organism::getX(){return this->x;}
 int Organism::getY(){return this->y;}
 
-void Organism::setCoords(int xx, int yy){
-    this->x = xx;
-    this->y = yy;
-}
 
 int* Organism::getRandomAdjacentField(){
     const int diffIndx = std::rand() % 8;

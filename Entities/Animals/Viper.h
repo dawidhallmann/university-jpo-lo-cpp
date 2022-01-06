@@ -10,7 +10,7 @@
 
 class Viper : public Animal {
     const int baseInitiative=2, baseStrength=3;
-    void collision(Organism* organism) override;
+    void collision(World* world, Organism* organism) override;
     void draw() override;
     using Animal::Animal;
 };

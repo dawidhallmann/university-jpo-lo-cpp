@@ -9,7 +9,7 @@
 #include "Plant.h"
 
 class Dandelion : public Plant {
-    void action() override;
+    void action(World* world) override;
     void draw() override;
     using Plant::Plant;
 };

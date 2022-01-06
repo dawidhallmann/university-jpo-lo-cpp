@@ -5,8 +5,8 @@
 #include <iostream>
 #include "Sloth.h"
 
-void Sloth::action() {
-    Animal::action();
+void Sloth::action(World* world) {
+    Animal::action(world);
     // Nigdy nie przemieszcza się dwa
     // razy pod rząd w kolejnych turach
 }

@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Dandelion.h"
 
-void Dandelion::action() {
+void Dandelion::action(World* world) {
     // Podejmuje trzy próby rozprzestrzeniania w
     // jednej turze
 }

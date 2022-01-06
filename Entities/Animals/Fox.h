@@ -10,7 +10,7 @@
 
 class Fox : public Animal {
     const int baseInitiative=7, baseStrength=3;
-    void action() override;
+    void action(World* world) override;
     void draw() override;
     using Animal::Animal;
 };

@@ -10,8 +10,8 @@
 
 class Plant : public Organism {
     using Organism::Organism;
-    void collision(Organism* organism) override;
-    void action() override;
+    void collision(World* world, Organism* organism) override;
+    void action(World* world) override;
 };
 
 

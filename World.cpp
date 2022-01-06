@@ -4,14 +4,15 @@
 
 #include <iostream>
 #include "World.h"
+#include "Entities/Organism.h"
 
 World::World() = default;
 
 void World::nextTurn() {
     for (const auto &organism: this->organismsActionOrder) {
-        organism->action();
+        organism->action(this);
         Organism* collidingEntity = this->worldRepresentation[organism->getY()][organism->getX()];
-        if (collidingEntity) organism->collision(collidingEntity);
+        if (collidingEntity) organism->collision(this, collidingEntity);
         this->generateWorldRepresentation();
     }
 }
