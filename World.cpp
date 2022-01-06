@@ -47,8 +47,13 @@ void World::addEntity(Organism* organism){
 
 void World::generateWorldRepresentation(){
     this->clearWorldRepresentation();
-    for (const auto &organism: this->organismsActionOrder) {
-        this->worldRepresentation[organism->getY()][organism->getX()] = organism;
+
+    for (
+        auto it = this->organismsActionOrder.rbegin();
+        it != this->organismsActionOrder.rend();
+        it++
+    ){
+        this->worldRepresentation[(*it)->getY()][(*it)->getX()] = *it;
     }
 }
 
