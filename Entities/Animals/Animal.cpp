@@ -5,4 +5,7 @@
 #include "Animal.h"
 
 void Animal::collision() {}
-void Animal::action() {}
+void Animal::action() {
+    this->x += 1;
+    this->y += 1;
+}

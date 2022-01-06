@@ -6,6 +6,7 @@
 #include "Sloth.h"
 
 void Sloth::action() {
+    Animal::action();
     // Nigdy nie przemieszcza się dwa
     // razy pod rząd w kolejnych turach
 }
