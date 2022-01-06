@@ -13,6 +13,7 @@ int main() {
     world.addEntity(new Fox(4, 2));
     world.addEntity(new Sloth(10, 4));
     world.addEntity(new Wolf(7, 15));
+    world.addEntity(new Wolf(9, 16));
 
     world.addEntity(new Grass(9, 15));
     world.addEntity(new Dandelion(10, 17));
