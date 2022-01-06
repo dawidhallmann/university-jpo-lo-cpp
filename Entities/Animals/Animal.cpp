@@ -7,7 +7,7 @@
 
 void Animal::collision() {}
 void Animal::action() {
-    int * newCoords = Organism::getRandomAdjacentField();
-    this->x += newCoords[0];
-    this->y += newCoords[1];
+    int * diff = Organism::getRandomAdjacentField();
+    this->x += diff[0];
+    this->y += diff[1];
 }

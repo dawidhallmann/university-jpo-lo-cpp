@@ -30,7 +30,16 @@ void World::drawWorld(){
 
 void World::addEntity(Organism* organism){
     this->worldRepresentation[organism->getY()][organism->getX()] = organism;
-    this->organismsActionOrder.push_back(organism);
+
+    bool inserted = false;
+    for (int i = 0; i < this->organismsActionOrder.size(); ++i) {
+        if(this->organismsActionOrder.at(i)->baseInitiative < organism->baseInitiative){
+            this->organismsActionOrder.insert(this->organismsActionOrder.begin()+i, organism);
+            inserted = true;
+            break;
+        }
+    }
+    if (!inserted) this->organismsActionOrder.push_back(organism);
 }
 
 void World::generateWorldRepresentation(){

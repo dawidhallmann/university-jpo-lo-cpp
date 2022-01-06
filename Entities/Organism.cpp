@@ -6,7 +6,7 @@
 #include "iostream"
 
 
-int coords[2];
+int coordsDiff[2];
 
 const int possibleMoves[8][2] = {
         {-1, 1},
@@ -39,11 +39,11 @@ void Organism::setCoords(int xx, int yy){
 int* Organism::getRandomAdjacentField(){
     const int diffIndx = std::rand() % 8;
 
-    coords[0] = this->x>=19 ?
+    coordsDiff[0] = this->x>=19 ?
                     -moveDistanceByBorder()
                     : this->x<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][1];
-    coords[1] = this->y>=19 ?
+    coordsDiff[1] = this->y>=19 ?
                     -moveDistanceByBorder()
                     : this->y<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][0];
-    return coords;
+    return coordsDiff;
 }

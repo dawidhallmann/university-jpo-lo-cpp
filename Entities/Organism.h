@@ -6,7 +6,7 @@
 #define UNIVERSITY_JPO_LO_CPP_ORGANISM_H
 
 
-extern int coords[2];
+extern int coordsDiff[2];
 
 class Organism {
 public:
@@ -18,8 +18,8 @@ public:
 
     int getX();
     int getY();
+    const int baseInitiative=0, baseStrength=0;
 protected:
-    static const int baseInitiative=0, baseStrength=0;
     int x, y;
     int *getRandomAdjacentField();
 };
