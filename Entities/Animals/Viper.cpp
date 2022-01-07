@@ -5,8 +5,8 @@
 #include "Viper.h"
 
 Viper::Viper(int x, int y) : Animal(x, y) {
-    this->baseInitiative=2;
-    this->baseStrength=3;
+    this->baseInitiative=3;
+    this->baseStrength=2;
     this->name="Viper";
 }
 
