@@ -21,7 +21,7 @@ int Organism::getX(){return this->x;}
 int Organism::getY(){return this->y;}
 int Organism::getNumberOfActions() {return this->numberOfActions;}
 
-int Organism::setNumberOfActions(int v) {this->numberOfActions = v;}
+void Organism::setNumberOfActions(int v) {this->numberOfActions = v;}
 
 
 int* Organism::getRandomAdjacentField(){

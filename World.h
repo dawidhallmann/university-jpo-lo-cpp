@@ -18,8 +18,11 @@ public:
     void drawWorld();
     void addEntity(Organism* organism);
     bool isFieldEmpty(int x, int y);
+
     Organism *getField(int x, int y);
+    int getTurnNumber();
 private:
+    int turnNumber=0;
     Organism* worldRepresentation[20][20] = {nullptr};
 
     std::vector <Organism*> organismsActionOrder;

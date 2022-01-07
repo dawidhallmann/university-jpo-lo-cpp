@@ -22,7 +22,7 @@ public:
     int getX();
     int getY();
     int getNumberOfActions();
-    int setNumberOfActions(int v);
+    void setNumberOfActions(int v);
     int baseInitiative=0, baseStrength=0;
     bool isDead = false;
 protected:

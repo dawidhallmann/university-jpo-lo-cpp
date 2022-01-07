@@ -16,6 +16,7 @@ void World::nextTurn() {
         for (int i = 0; i < organism->getNumberOfActions(); ++i) {
             organism->action(this);
         }
+        organism->setNumberOfActions(1);
         Organism* collidingEntity = this->worldRepresentation[organism->getY()][organism->getX()];
         if (
             collidingEntity
@@ -30,10 +31,12 @@ void World::nextTurn() {
         }
     }
     this->generateWorldRepresentation();
+    this->turnNumber++;
 }
 
 void World::drawWorld(){
-    std::cout << "Entites count: " << this->organismsActionOrder.size() << std::endl;
+    std::cout << "Entities count: " << this->organismsActionOrder.size() << " | ";
+    std::cout << "Turn number: " << this->turnNumber << std::endl;
     for (auto & organism : this->worldRepresentation) {
         std::cout << "| ";
         for (auto & j : organism) {
@@ -82,4 +85,8 @@ bool World::isFieldEmpty(int x, int y) {
 
 Organism* World::getField(int x, int y) {
     return this->worldRepresentation[y][x];
+}
+
+int World::getTurnNumber() {
+    return this->turnNumber;
 }

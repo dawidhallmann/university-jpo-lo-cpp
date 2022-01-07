@@ -12,8 +12,7 @@ Sloth::Sloth(int x, int y) : Animal(x, y) {
 void Sloth::action(World* world) {
     // Nigdy nie przemieszcza się dwa
     // razy pod rząd w kolejnych turach
-    if (this->numberOfActions) Animal::action(world);
-    this->numberOfActions = this->numberOfActions ? 0 : 1;
+    if (world->getTurnNumber() % 2) Animal::action(world);
 }
 
 void Sloth::collision(World* world, Organism* organism) {
