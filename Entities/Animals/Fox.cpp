@@ -22,7 +22,10 @@ void Fox::collision(World* world, Organism* organism) {
         if (!newAnimalCoords[0] && !newAnimalCoords[1]) return;
         world->addEntity(new Fox(newAnimalCoords[0], newAnimalCoords[1]));
     } else {
-        if (this->baseStrength >= organism->baseStrength) organism->isDead = true;
+        if (this->baseStrength >= organism->baseStrength){
+            organism->isDead = true;
+            organism->deathCallback(this);
+        }
     }
 }
 

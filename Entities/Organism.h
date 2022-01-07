@@ -17,6 +17,7 @@ public:
     virtual void action(World* world) = 0;
     virtual void collision(World* world, Organism* organism) = 0;
     virtual char draw() = 0;
+    virtual void deathCallback(Organism* organism);
 
     int getX();
     int getY();

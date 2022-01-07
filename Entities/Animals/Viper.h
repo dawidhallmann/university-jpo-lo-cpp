@@ -14,6 +14,7 @@ public:
     void collision(World* world, Organism* organism) override;
     char draw() override;
     using Animal::Animal;
+    void deathCallback(Organism *organism);
 };
 
 

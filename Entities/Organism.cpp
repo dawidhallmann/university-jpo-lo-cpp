@@ -58,3 +58,5 @@ int* Organism::getEmptyAdjacentField(World* world){
     coordsDiff[1] = 0;
     return coordsDiff;
 }
+
+void Organism::deathCallback(Organism *organism) {}

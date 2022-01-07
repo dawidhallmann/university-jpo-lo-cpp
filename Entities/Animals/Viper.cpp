@@ -19,8 +19,15 @@ void Viper::collision(World* world, Organism* organism) {
         if (!newAnimalCoords[0] && !newAnimalCoords[1]) return;
         world->addEntity(new Viper(newAnimalCoords[0], newAnimalCoords[1]));
     } else {
-        if (this->baseStrength >= organism->baseStrength) organism->isDead = true;
+        if (this->baseStrength >= organism->baseStrength){
+            organism->isDead = true;
+            organism->deathCallback(this);
+        }
     }
+}
+
+void Viper::deathCallback(Organism *organism) {
+    organism->isDead = true;
 }
 
 char Viper::draw() {
