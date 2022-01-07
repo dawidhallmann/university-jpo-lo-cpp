@@ -16,8 +16,9 @@ void World::nextTurn() {
         this->generateWorldRepresentation();
     }
     for (int i = 0; i < this->organismsActionOrder.size(); ++i) {
-        if (this->organismsActionOrder.at(i)->isDead)
+        if (this->organismsActionOrder.at(i)->isDead) {
             this->organismsActionOrder.erase(this->organismsActionOrder.begin() + i);
+        }
     }
 }
 
