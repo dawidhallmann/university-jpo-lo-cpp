@@ -17,6 +17,9 @@ public:
     static void spawn1AnimalSet(World* world);
 
     static void spawnFoxes(World* world);
+
+    static void spawnCompletePlantSet(World* world);
+    static void spawnCompleteAnimalSet(World* world);
 };
 
 

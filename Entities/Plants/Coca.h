@@ -8,7 +8,7 @@
 
 #include "Plant.h"
 
-class Coca : Plant {
+class Coca : public Plant {
     void collision(World* world, Organism* organism) override;
     void draw() override;
     using Plant::Plant;
