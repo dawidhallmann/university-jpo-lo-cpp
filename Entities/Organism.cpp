@@ -8,17 +8,6 @@
 
 int coordsDiff[2];
 
-const int possibleMoves[8][2] = {
-        {-1, 1},
-        {0, 1},
-        {1, 1},
-        {1, 0},
-        {1, -1},
-        {0, -1},
-        {-1, -1},
-        {-1, 0},
-};
-
 int moveDistanceByBorder(){
     return std::rand() % 5 < 2 ? 0 : 1;
 }

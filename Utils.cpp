@@ -43,6 +43,13 @@ void Utils::spawn1AnimalSet(World *world) {
     world->addEntity(new Wolf(2, 1));
 }
 
+void Utils::spawn2AnimalSet(World *world) {
+    world->addEntity(new Wolf(15, 12));
+    world->addEntity(new Viper(14, 12));
+    world->addEntity(new Wolf(8, 12));
+    world->addEntity(new Wolf(2, 11));
+}
+
 void Utils::spawnFoxes(World *world) {
     world->addEntity(new Fox(4, 12));
     world->addEntity(new Fox(6, 12));

@@ -69,3 +69,7 @@ void World::clearWorldRepresentation(){
 bool World::isFieldEmpty(int x, int y) {
     return !this->worldRepresentation[y][x];
 }
+
+Organism* World::getField(int x, int y) {
+    return this->worldRepresentation[y][x];
+}

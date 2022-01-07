@@ -27,6 +27,17 @@ protected:
     int x, y;
     int *getRandomAdjacentField();
     int *getEmptyAdjacentField(World* world);
+
+    constexpr static int possibleMoves[8][2] = {
+            {-1, 1},
+            {0, 1},
+            {1, 1},
+            {1, 0},
+            {1, -1},
+            {0, -1},
+            {-1, -1},
+            {-1, 0},
+    };
 };
 
 
