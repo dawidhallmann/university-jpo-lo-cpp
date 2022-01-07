@@ -10,7 +10,7 @@
 
 class Wolf : public Animal {
     const int baseInitiative=5, baseStrength=9;
-    void draw() override;
+    char draw() override;
     using Animal::Animal;
 };
 

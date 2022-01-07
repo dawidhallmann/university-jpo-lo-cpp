@@ -10,7 +10,7 @@
 
 class Sheep : public Animal {
     const int baseInitiative=4, baseStrength=4;
-    void draw() override;
+    char draw() override;
     using Animal::Animal;
 };
 

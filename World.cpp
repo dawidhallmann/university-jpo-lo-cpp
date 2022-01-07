@@ -22,9 +22,7 @@ void World::drawWorld(){
     for (auto & organism : this->worldRepresentation) {
         std::cout << "| ";
         for (auto & j : organism) {
-            if (j) j->draw();
-            else std::cout << " ";
-            std::cout << " ";
+            std::cout << (j ? j->draw() : ' ') << ' ';
         }
         std::cout << "|";
         std::cout << std::endl;

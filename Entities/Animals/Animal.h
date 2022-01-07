@@ -9,9 +9,9 @@
 #include "../Organism.h"
 
 class Animal : public Organism {
+public:
     void collision(World* world, Organism* organism) override;
     using Organism::Organism;
-protected:
     void action(World* world) override;
 };
 

@@ -16,6 +16,6 @@ void Dandelion::action(World* world) {
     }
 }
 
-void Dandelion::draw() {
-    std::cout << 'D';
+char Dandelion::draw() {
+    return 'D';
 }

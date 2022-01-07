@@ -2,7 +2,6 @@
 // Created by ahgsfds on 2022-01-04.
 //
 
-#include <iostream>
 #include "Viper.h"
 
 void Viper::collision(World* world, Organism* organism) {
@@ -11,6 +10,6 @@ void Viper::collision(World* world, Organism* organism) {
     // swojego pogromcę.
 }
 
-void Viper::draw() {
-    std::cout << 'V';
+char Viper::draw() {
+    return 'V';
 }

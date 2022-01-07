@@ -14,6 +14,6 @@ void Grass::action(World *world) {
     }
 }
 
-void Grass::draw() {
-    std::cout << 'G';
+char Grass::draw() {
+    return 'G';
 }

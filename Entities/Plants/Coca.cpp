@@ -20,6 +20,6 @@ void Coca::action(World *world) {
     }
 }
 
-void Coca::draw() {
-    std::cout << 'C';
+char Coca::draw() {
+    return 'C';
 }

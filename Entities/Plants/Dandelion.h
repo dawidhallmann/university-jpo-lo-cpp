@@ -10,7 +10,7 @@
 
 class Dandelion : public Plant {
     void action(World* world) override;
-    void draw() override;
+    char draw() override;
     using Plant::Plant;
 };
 

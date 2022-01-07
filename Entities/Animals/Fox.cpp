@@ -2,7 +2,6 @@
 // Created by ahgsfds on 2022-01-04.
 //
 
-#include <iostream>
 #include "Fox.h"
 
 void Fox::action(World* world) {
@@ -12,6 +11,6 @@ void Fox::action(World* world) {
     // organizm silniejszy niż on
 }
 
-void Fox::draw() {
-    std::cout << "F";
+char Fox::draw() {
+    return 'F';
 }

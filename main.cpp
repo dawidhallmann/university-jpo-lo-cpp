@@ -8,10 +8,10 @@ int main() {
 
     World world;
     Utils::spawn1AnimalSet(&world);
-    Utils::spawn1PlantSet(&world);
-    //Utils::spawnFoxes(&world);
+    //Utils::spawn1PlantSet(&world);
+    Utils::spawnFoxes(&world);
     Utils::spawnCompleteAnimalSet(&world);
-    Utils::spawnCompletePlantSet(&world);
+    //Utils::spawnCompletePlantSet(&world);
 
     world.drawWorld();
     Utils::printGameControlOptions();

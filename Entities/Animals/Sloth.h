@@ -11,7 +11,7 @@
 class Sloth : public Animal {
     const int baseInitiative=1, baseStrength=2;
     void action(World* world) override;
-    void draw() override;
+    char draw() override;
     using Animal::Animal;
 };
 
