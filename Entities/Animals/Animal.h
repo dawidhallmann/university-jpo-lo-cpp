@@ -14,6 +14,8 @@ public:
     void collision(World* world, Organism* organism) override;
     using Organism::Organism;
     void action(World* world) override;
+
+    void deathCallback(Organism *organism);
 };
 
 

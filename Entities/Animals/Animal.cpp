@@ -13,3 +13,7 @@ void Animal::action(World* world) {
 void Animal::collision(World *world, Organism *organism) {}
 
 Animal::Animal(int x, int y) : Organism(x, y) {}
+
+void Animal::deathCallback(Organism *organism) {
+    std::cout << this->getName() << " was killed by " << organism->getName() << std::endl;
+}

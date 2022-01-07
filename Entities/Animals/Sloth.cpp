@@ -7,6 +7,7 @@
 Sloth::Sloth(int x, int y) : Animal(x, y) {
     this->baseInitiative=1;
     this->baseStrength=2;
+    this->name="Sloth";
 }
 
 void Sloth::action(World* world) {

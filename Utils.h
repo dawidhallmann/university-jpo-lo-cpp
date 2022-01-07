@@ -16,11 +16,13 @@ public:
     static void spawn1PlantSet(World* world);
     static void spawn1AnimalSet(World* world);
     static void spawn2AnimalSet(World *world);
+    static void spawn3AnimalSet(World *world);
+
+    static void spawnCompletePlantSet(World* world);
+    static void spawnCompleteAnimalSet(World* world);
 
     static void spawnFoxes(World* world);
-    static void spawnCompletePlantSet(World* world);
-
-    static void spawnCompleteAnimalSet(World* world);
+    static void spawnCoca(World *world);
 };
 
 

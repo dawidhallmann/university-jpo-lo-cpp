@@ -6,9 +6,11 @@
 #include "Coca.h"
 
 void Coca::collision(World* world, Organism* organism) {
+    std::cout << organism->getName() << " ate Coca" << std::endl;
     // Zwierze, które zjadło tę roślinę w
     // następnej kolejce ma dodatkowy
     // ruch
+    organism->setNumberOfActions(organism->getNumberOfActions() + 1);
 }
 
 void Coca::action(World *world) {

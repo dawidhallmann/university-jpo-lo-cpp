@@ -19,6 +19,7 @@ Organism::Organism(int x, int y){
 
 int Organism::getX(){return this->x;}
 int Organism::getY(){return this->y;}
+std::string Organism::getName() {return this->name;}
 int Organism::getNumberOfActions() {return this->numberOfActions;}
 
 void Organism::setNumberOfActions(int v) {this->numberOfActions = v;}

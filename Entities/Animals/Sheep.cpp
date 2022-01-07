@@ -7,6 +7,7 @@
 Sheep::Sheep(int x, int y) : Animal(x, y) {
     this->baseInitiative=4;
     this->baseStrength=4;
+    this->name="Sheep";
 }
 
 void Sheep::collision(World* world, Organism* organism) {

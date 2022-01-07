@@ -7,6 +7,7 @@
 Fox::Fox(int x, int y) : Animal(x, y) {
     this->baseInitiative=7;
     this->baseStrength=3;
+    this->name="Fox";
 }
 
 void Fox::action(World* world) {
@@ -25,6 +26,7 @@ void Fox::action(World* world) {
                 world->isFieldEmpty(possibleCoords[0], possibleCoords[1]) ||
                 world->getField(possibleCoords[0], possibleCoords[1])->baseStrength <= this->baseStrength
             ) {
+                std::cout << "Fox ran away from " << world->getField(diff[0], diff[1])->getName() << std::endl;
                 this->x = coordsDiff[0];
                 this->y = coordsDiff[1];
                 return;

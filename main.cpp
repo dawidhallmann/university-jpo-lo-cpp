@@ -9,8 +9,10 @@ int main() {
     World world;
     Utils::spawn1AnimalSet(&world);
     //Utils::spawn2AnimalSet(&world);
+    Utils::spawn3AnimalSet(&world);
     //Utils::spawn1PlantSet(&world);
     //Utils::spawnFoxes(&world);
+    Utils::spawnCoca(&world);
     //Utils::spawnCompleteAnimalSet(&world);
     //Utils::spawnCompletePlantSet(&world);
 

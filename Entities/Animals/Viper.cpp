@@ -7,6 +7,7 @@
 Viper::Viper(int x, int y) : Animal(x, y) {
     this->baseInitiative=2;
     this->baseStrength=3;
+    this->name="Viper";
 }
 
 void Viper::collision(World* world, Organism* organism) {
@@ -27,6 +28,7 @@ void Viper::collision(World* world, Organism* organism) {
 }
 
 void Viper::deathCallback(Organism *organism) {
+    std::cout << this->getName() << " poisoned " << organism->getName() << std::endl;
     organism->isDead = true;
 }
 

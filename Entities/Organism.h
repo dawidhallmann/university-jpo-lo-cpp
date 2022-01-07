@@ -21,12 +21,14 @@ public:
 
     int getX();
     int getY();
+    std::string getName();
     int getNumberOfActions();
     void setNumberOfActions(int v);
     int baseInitiative=0, baseStrength=0;
     bool isDead = false;
 protected:
     int x, y;
+    std::string name = "Organism";
     int *getRandomAdjacentField();
     int *getEmptyAdjacentField(World* world);
     int numberOfActions = 1;

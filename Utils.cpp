@@ -50,6 +50,17 @@ void Utils::spawn2AnimalSet(World *world) {
     world->addEntity(new Wolf(2, 11));
 }
 
+void Utils::spawn3AnimalSet(World *world) {
+    world->addEntity(new Viper(4, 6));
+    world->addEntity(new Viper(14, 8));
+    world->addEntity(new Viper(1, 2));
+    world->addEntity(new Viper(9, 10));
+    world->addEntity(new Sloth(7, 13));
+    world->addEntity(new Sloth(12, 1));
+    world->addEntity(new Sloth(7, 19));
+    world->addEntity(new Sloth(8, 18));
+}
+
 void Utils::spawnFoxes(World *world) {
     world->addEntity(new Fox(4, 12));
     world->addEntity(new Fox(6, 12));
@@ -59,6 +70,11 @@ void Utils::spawnFoxes(World *world) {
     world->addEntity(new Fox(12, 8));
     world->addEntity(new Fox(11, 3));
     world->addEntity(new Fox(11, 4));
+}
+
+void Utils::spawnCoca(World *world) {
+    world->addEntity(new Coca(12, 14));
+    world->addEntity(new Coca(1, 4));
 }
 
 void Utils::spawnCompletePlantSet(World *world) {
