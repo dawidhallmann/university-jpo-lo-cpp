@@ -12,6 +12,7 @@ class Coca : Plant {
     void collision(World* world, Organism* organism) override;
     void draw() override;
     using Plant::Plant;
+    void action(World *world) override;
 };
 
 

@@ -9,6 +9,9 @@
 #include "../Organism.h"
 
 class Plant : public Organism {
+public:
+    static const int chanceToExpand = 15; // in percents
+    static bool plantExpanding();
     using Organism::Organism;
     void collision(World* world, Organism* organism) override;
     void action(World* world) override;

@@ -11,6 +11,15 @@ void Coca::collision(World* world, Organism* organism) {
     // ruch
 }
 
+void Coca::action(World *world) {
+    if (Plant::plantExpanding()){
+        int * diff = Organism::getRandomAdjacentField();
+        if (world->isFieldEmpty(diff[0], diff[1])) {
+            world->addEntity(new Coca(diff[0], diff[1]));
+        }
+    }
+}
+
 void Coca::draw() {
     std::cout << 'C';
 }
