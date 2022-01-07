@@ -21,12 +21,15 @@ public:
 
     int getX();
     int getY();
+    int getNumberOfActions();
+    int setNumberOfActions(int v);
     int baseInitiative=0, baseStrength=0;
     bool isDead = false;
 protected:
     int x, y;
     int *getRandomAdjacentField();
     int *getEmptyAdjacentField(World* world);
+    int numberOfActions = 1;
 
     constexpr static int possibleMoves[8][2] = {
             {-1, 1},

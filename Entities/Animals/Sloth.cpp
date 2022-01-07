@@ -10,9 +10,10 @@ Sloth::Sloth(int x, int y) : Animal(x, y) {
 }
 
 void Sloth::action(World* world) {
-    Animal::action(world);
     // Nigdy nie przemieszcza się dwa
     // razy pod rząd w kolejnych turach
+    if (this->numberOfActions) Animal::action(world);
+    this->numberOfActions = this->numberOfActions ? 0 : 1;
 }
 
 void Sloth::collision(World* world, Organism* organism) {

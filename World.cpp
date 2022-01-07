@@ -9,10 +9,19 @@
 World::World() = default;
 
 void World::nextTurn() {
+    int oldCoords[2];
     for (auto & organism : this->organismsActionOrder) {
-        organism->action(this);
+        oldCoords[0] = organism->getX();
+        oldCoords[1] = organism->getY();
+        for (int i = 0; i < organism->getNumberOfActions(); ++i) {
+            organism->action(this);
+        }
         Organism* collidingEntity = this->worldRepresentation[organism->getY()][organism->getX()];
-        if (collidingEntity) organism->collision(this, collidingEntity);
+        if (
+            collidingEntity
+            && organism->getX() != oldCoords[0]
+            && organism->getY() != oldCoords[1]
+        ) organism->collision(this, collidingEntity);
         this->generateWorldRepresentation();
     }
     for (int i = 0; i < this->organismsActionOrder.size(); ++i) {
@@ -20,6 +29,7 @@ void World::nextTurn() {
             this->organismsActionOrder.erase(this->organismsActionOrder.begin() + i);
         }
     }
+    this->generateWorldRepresentation();
 }
 
 void World::drawWorld(){
