@@ -10,6 +10,7 @@
 
 class Animal : public Organism {
 public:
+    Animal(int x, int y);
     void collision(World* world, Organism* organism) override;
     using Organism::Organism;
     void action(World* world) override;

@@ -20,10 +20,12 @@ public:
 
     int getX();
     int getY();
-    const int baseInitiative=0, baseStrength=0;
+    int baseInitiative=0, baseStrength=0;
+    bool isDead = false;
 protected:
     int x, y;
     int *getRandomAdjacentField();
+    int *getEmptyAdjacentField(World* world);
 };
 
 

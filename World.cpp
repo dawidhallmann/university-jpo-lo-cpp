@@ -9,11 +9,15 @@
 World::World() = default;
 
 void World::nextTurn() {
-    for (const auto &organism: this->organismsActionOrder) {
+    for (auto & organism : this->organismsActionOrder) {
         organism->action(this);
         Organism* collidingEntity = this->worldRepresentation[organism->getY()][organism->getX()];
         if (collidingEntity) organism->collision(this, collidingEntity);
         this->generateWorldRepresentation();
+    }
+    for (int i = 0; i < this->organismsActionOrder.size(); ++i) {
+        if (this->organismsActionOrder.at(i)->isDead)
+            this->organismsActionOrder.erase(this->organismsActionOrder.begin() + i);
     }
 }
 
@@ -22,7 +26,7 @@ void World::drawWorld(){
     for (auto & organism : this->worldRepresentation) {
         std::cout << "| ";
         for (auto & j : organism) {
-            std::cout << (j ? j->draw() : ' ') << ' ';
+            std::cout << (j ? j->draw() : ' ') << '|';
         }
         std::cout << "|";
         std::cout << std::endl;
@@ -32,7 +36,6 @@ void World::drawWorld(){
 
 void World::addEntity(Organism* organism){
     this->worldRepresentation[organism->getY()][organism->getX()] = organism;
-
     bool inserted = false;
     for (int i = 0; i < this->organismsActionOrder.size(); ++i) {
         if(this->organismsActionOrder.at(i)->baseInitiative < organism->baseInitiative){

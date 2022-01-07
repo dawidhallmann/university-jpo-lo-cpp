@@ -9,10 +9,12 @@
 #include "Animal.h"
 
 class Fox : public Animal {
-    const int baseInitiative=7, baseStrength=3;
+public:
+    Fox(int x, int y);
     void action(World* world) override;
     char draw() override;
     using Animal::Animal;
+    void collision(World *world, Organism *organism) override;
 };
 
 

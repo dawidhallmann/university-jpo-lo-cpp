@@ -43,3 +43,17 @@ int* Organism::getRandomAdjacentField(){
                     : this->y<=0 ? moveDistanceByBorder() : possibleMoves[diffIndx][0]);
     return coordsDiff;
 }
+
+int* Organism::getEmptyAdjacentField(World* world){
+    // returns [0, 0] if all are occupied
+
+    for (auto possibleMove : possibleMoves) {
+        coordsDiff[0] = this->x + possibleMove[1];
+        coordsDiff[1] = this->y + possibleMove[0];
+        if (coordsDiff[0] < 0 || coordsDiff[0] > 19 || coordsDiff[1] < 0 || coordsDiff[1] > 19) continue;
+        if (world->isFieldEmpty(coordsDiff[0], coordsDiff[1])) return coordsDiff;
+    }
+    coordsDiff[0] = 0;
+    coordsDiff[1] = 0;
+    return coordsDiff;
+}

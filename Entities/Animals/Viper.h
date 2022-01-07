@@ -9,7 +9,8 @@
 #include "Animal.h"
 
 class Viper : public Animal {
-    const int baseInitiative=2, baseStrength=3;
+public:
+    Viper(int x, int y);
     void collision(World* world, Organism* organism) override;
     char draw() override;
     using Animal::Animal;

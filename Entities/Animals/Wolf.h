@@ -9,9 +9,11 @@
 #include "Animal.h"
 
 class Wolf : public Animal {
-    const int baseInitiative=5, baseStrength=9;
+public:
+    Wolf(int x, int y);
     char draw() override;
     using Animal::Animal;
+    void collision(World *world, Organism *organism) override;
 };
 
 

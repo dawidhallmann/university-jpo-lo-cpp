@@ -7,9 +7,9 @@ int main() {
     Utils::intro();
 
     World world;
-    Utils::spawn1AnimalSet(&world);
+    //Utils::spawn1AnimalSet(&world);
     //Utils::spawn1PlantSet(&world);
-    Utils::spawnFoxes(&world);
+    //Utils::spawnFoxes(&world);
     Utils::spawnCompleteAnimalSet(&world);
     //Utils::spawnCompletePlantSet(&world);
 

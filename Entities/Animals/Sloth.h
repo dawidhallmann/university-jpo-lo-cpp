@@ -9,10 +9,13 @@
 #include "Animal.h"
 
 class Sloth : public Animal {
-    const int baseInitiative=1, baseStrength=2;
+public:
+    Sloth(int x, int y);
     void action(World* world) override;
     char draw() override;
     using Animal::Animal;
+
+    void collision(World *world, Organism *organism);
 };
 
 

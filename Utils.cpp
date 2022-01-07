@@ -44,14 +44,14 @@ void Utils::spawn1AnimalSet(World *world) {
 }
 
 void Utils::spawnFoxes(World *world) {
-    world->addEntity(new Fox(4, 2));
-    world->addEntity(new Fox(6, 2));
-    world->addEntity(new Fox(4, 3));
-    world->addEntity(new Fox(4, 5));
-    world->addEntity(new Fox(2, 7));
-    world->addEntity(new Fox(2, 8));
-    world->addEntity(new Fox(1, 3));
-    world->addEntity(new Fox(1, 4));
+    world->addEntity(new Fox(4, 12));
+    world->addEntity(new Fox(6, 12));
+    world->addEntity(new Fox(4, 13));
+    world->addEntity(new Fox(14, 5));
+    world->addEntity(new Fox(12, 7));
+    world->addEntity(new Fox(12, 8));
+    world->addEntity(new Fox(11, 3));
+    world->addEntity(new Fox(11, 4));
 }
 
 void Utils::spawnCompletePlantSet(World *world) {
@@ -66,19 +66,21 @@ void Utils::spawnCompleteAnimalSet(World *world) {
     world->addEntity(new Fox(9, 4));
     world->addEntity(new Fox(3, 4));
 
-    world->addEntity(new Sloth(1, 4));
-    world->addEntity(new Sloth(2, 4));
-    world->addEntity(new Sloth(1, 3));
+    world->addEntity(new Sloth(6, 2));
+    world->addEntity(new Sloth(4, 14));
+    world->addEntity(new Sloth(9, 3));
 
-    world->addEntity(new Wolf(9, 11));
-    world->addEntity(new Wolf(3, 15));
-    world->addEntity(new Wolf(8, 5));
+    world->addEntity(new Wolf(2, 4));
+    world->addEntity(new Wolf(1, 17));
+    world->addEntity(new Wolf(18, 19));
+    world->addEntity(new Wolf(16, 3));
+    world->addEntity(new Wolf(8, 9));
 
     world->addEntity(new Sheep(19, 15));
-    world->addEntity(new Sheep(17, 0));
+    world->addEntity(new Sheep(17, 7));
     world->addEntity(new Sheep(16, 0));
 
-    world->addEntity(new Viper(0, 5));
+    world->addEntity(new Viper(10, 2));
     world->addEntity(new Viper(0, 7));
-    world->addEntity(new Viper(2, 8));
+    world->addEntity(new Viper(12, 9));
 }
