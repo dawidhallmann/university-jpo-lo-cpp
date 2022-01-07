@@ -20,12 +20,13 @@ void World::nextTurn() {
 void World::drawWorld(){
     std::cout << "Entites count: " << this->organismsActionOrder.size() << std::endl;
     for (auto & organism : this->worldRepresentation) {
-        std::cout << "|";
+        std::cout << "| ";
         for (auto & j : organism) {
             if (j) j->draw();
             else std::cout << " ";
-            std::cout << "|";
+            std::cout << " ";
         }
+        std::cout << "|";
         std::cout << std::endl;
     }
     std::cout << std::endl;
