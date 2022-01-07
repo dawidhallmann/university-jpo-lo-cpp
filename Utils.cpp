@@ -75,6 +75,7 @@ void Utils::spawnFoxes(World *world) {
 void Utils::spawnCoca(World *world) {
     world->addEntity(new Coca(12, 14));
     world->addEntity(new Coca(1, 4));
+    world->addEntity(new Coca(19, 6));
 }
 
 void Utils::spawnCompletePlantSet(World *world) {

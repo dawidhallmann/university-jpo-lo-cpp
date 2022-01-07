@@ -10,6 +10,8 @@
 
 class Plant : public Organism {
 public:
+    Plant(int x, int y);
+
     static const int chanceToExpand = 15; // in percents
     static bool plantExpanding();
     using Organism::Organism;

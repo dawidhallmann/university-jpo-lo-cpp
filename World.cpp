@@ -80,10 +80,12 @@ void World::clearWorldRepresentation(){
 }
 
 bool World::isFieldEmpty(int x, int y) {
+    if (x > 19 || x < 0 || y > 19 || y < 0) return false;
     return !this->worldRepresentation[y][x];
 }
 
 Organism* World::getField(int x, int y) {
+    if (x > 19 || x < 0 || y > 19 || y < 0) return nullptr;
     return this->worldRepresentation[y][x];
 }
 

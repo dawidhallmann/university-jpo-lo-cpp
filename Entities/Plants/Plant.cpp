@@ -5,6 +5,8 @@
 #include "iostream"
 #include "Plant.h"
 
+Plant::Plant(int x, int y) : Organism(x, y) {}
+
 void Plant::collision(World* world, Organism* organism) {}
 void Plant::action(World* world) {}
 

@@ -5,6 +5,10 @@
 #include <iostream>
 #include "Coca.h"
 
+Coca::Coca(int x, int y) : Plant(x, y) {
+    this->name="Coca";
+}
+
 void Coca::collision(World* world, Organism* organism) {
     std::cout << organism->getName() << " ate Coca" << std::endl;
     // Zwierze, które zjadło tę roślinę w
