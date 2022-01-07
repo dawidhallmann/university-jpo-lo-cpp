@@ -15,6 +15,7 @@ void Sheep::collision(World* world, Organism* organism) {
         int * newAnimalCoords = Organism::getEmptyAdjacentField(world);
         if (!newAnimalCoords[0] && !newAnimalCoords[1]) return;
         world->addEntity(new Sheep(newAnimalCoords[0], newAnimalCoords[1]));
+        std::cout << "New " << this->getName() << "!" << std::endl;
     } else {
         if (this->baseStrength >= organism->baseStrength){
             organism->isDead = true;
